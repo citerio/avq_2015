@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<!--cabecera -->
+<head>
+    <script type="text/javascript" src="socket.io/socket.io.js"></script>
+    <title>Ambiente Virtual Quirurgico</title>
+	<style type="text/css">
+video {
+
+padding: 0px;
+margin: 0px;
+border: 2px solid black;
+border-radius: 15px;
+box-shadow: 5px 5px 2.5px gray;
+box-sizing: border-box;
+-o-object-fit: cover;
+}
+
+video:hover {
+
+
+background-color: black;
+-moz-transition-property: all;
+-moz-transition-duration: 1s;
+-moz-transition-timing-function: linear;
+-webkit-transition-property: all;
+-webkit-transition-duration: 1s;
+-webkit-transition-timing-function: linear;
+-o-transition-property: all;
+-o-transition-duration: 1s;
+-o-transition-timing-function: linear;
+}
+
+table{
+			
+			
+			border-collapse: collapse;
+			
+			
+}
+</style>
+	
+		
+</head>
+
+<!--cuerpo -->
+<body>
+
+    <div id="videoDiv">
+    
+	<table border="1" width="100%">
+	
+	    <tr>
+		    <td align="center" colspan="4"><video id="localVideo" width="320" height="180" autoplay controls></video></td>
+		</tr>
+		
+		<tr>
+		    
+		    <td><video id="remoteVideo1" width="320" height="180" autoplay controls></video></td>
+		    <td><video id="remoteVideo2" width="320" height="180" autoplay controls></video></td>
+		    <td><video id="remoteVideo3" width="320" height="180" autoplay controls></video></td>
+	        <td><video id="remoteVideo4" width="320" height="180" autoplay controls></video></td>
+		</tr>
+			
+		
+	
+	</table>
+	</div>
+
+    <div id="chatDiv">
+    
+	<table border="1" width="100%">
+	
+	    <tr>
+		    <td align="center">
+		        <textarea rows="4" cols="60" id="dataChannelSend" disabled placeholder="sera habilitado cuando el canal este iniciado"></textarea>		  
+		    </td>
+			
+			
+			<td align="center">
+			    <textarea rows="4" cols="60" id="dataChannelReceive" disabled></textarea>			
+			</td>
+		  
+		</tr>
+		
+		<tr>
+		    <td align="center"><button id="sendButton" disabled>Send</button></td>
+			<td></td>
+		</tr>	
+			
+		
+	
+	</table>
+	</div>  	
+	
+	
+	
+	
+
+
+    
+    
+    
+    <script src="js/lib/adapter.js"></script>
+    <script src="js/clientside.js"></script>
+    
+
+</body>
+</html>
